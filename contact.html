@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery &amp; FAQs | Urban Bloom Florist</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">✿</span><span><span class="brand-name">URBAN BLOOM</span><span class="brand-tagline">FLORIST · AUCKLAND</span></span></a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false" type="button"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Home</a><a href="flowers.html">Flowers &amp; Gifts</a><a href="weddings.html">Weddings &amp; Events</a><a href="corporate.html">Corporate</a><a href="contact.html">Delivery &amp; FAQs</a><a class="nav-cta" href="contact.html#enquiry">Enquire Now ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb">Home / Delivery &amp; FAQs</p>
+        <p class="eyebrow">WE'RE HERE TO HELP</p>
+        <h1>Let's make it <em>personal.</em></h1>
+        <p>Ask about bouquets, delivery, weddings, business arrangements or a special request.</p>
+      </div>
+    </section>
+
+    <section class="section" id="enquiry">
+      <div class="container two-column">
+        <div>
+          <p class="eyebrow">CONTACT URBAN BLOOM</p>
+          <h2 class="page-title">Tell us what you have in mind</h2>
+          <p>Include your occasion, preferred date, Auckland suburb, colour preferences and budget.</p>
+          <div class="notice">This demonstration form does not send your personal details to a business.</div>
+          <h3>Delivery questions?</h3>
+          <p>Delivery areas, charges, cut-off times and availability need to be confirmed before ordering.</p>
+        </div>
+
+        <form class="enquiry-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="full-name">Your name *</label>
+              <input id="full-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email address *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="form-field">
+              <label for="enquiry-type">Enquiry type *</label>
+              <select id="enquiry-type" name="enquiry-type" required>
+                <option value="">Please choose</option>
+                <option>Flowers and gifts</option>
+                <option>Wedding or event</option>
+                <option>Corporate flowers</option>
+                <option>Delivery question</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="event-date">Preferred date</label>
+            <input id="event-date" name="date" type="date">
+          </div>
+
+          <div class="form-field">
+            <label for="message">How can we help? *</label>
+            <textarea id="message" name="message" placeholder="Tell us about your occasion, suburb, flower style and budget..." required></textarea>
+          </div>
+
+          <button class="button" type="submit">Submit Enquiry</button>
+          <div class="form-feedback" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-cream">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">HELPFUL INFORMATION</p>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq-list">
+          <details><summary>Can I request particular colours?</summary><p>Yes. Describe your preferred colours and style. Specific flower varieties depend on seasonal availability.</p></details>
+          <details><summary>Do you offer Auckland delivery?</summary><p>Ask about your suburb and preferred date. Delivery availability and fees must be confirmed.</p></details>
+          <details><summary>When should I enquire about wedding flowers?</summary><p>Share your date, venue, guest numbers and requirements as early as possible.</p></details>
+          <details><summary>Can businesses request regular flowers?</summary><p>Yes. Include your business location, preferred frequency, arrangement sizes and budget.</p></details>
+          <details><summary>Are the prices final?</summary><p>No. Any example prices on this website are illustrative. Confirm final prices before ordering.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand footer-brand" href="index.html"><span class="brand-mark">✿</span><span><span class="brand-name">URBAN BLOOM</span><span class="brand-tagline">FLORIST · AUCKLAND</span></span></a><p>Seasonal blooms. Personal touches. Made with care.</p></div>
+      <div class="footer-links"><h3>Explore</h3><a href="flowers.html">Flowers &amp; Gifts</a><a href="weddings.html">Weddings &amp; Events</a><a href="corporate.html">Corporate</a><a href="contact.html">Delivery &amp; FAQs</a></div>
+      <div><h3>Contact</h3><p>Auckland, New Zealand</p><a href="#enquiry">Make an enquiry ↗</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year"></span> Urban Bloom Florist</span><span>Thoughtfully arranged in Auckland.</span></div>
+  </footer>
+</body>
+</html>
