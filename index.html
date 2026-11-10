@@ -40,6 +40,10 @@
       text-decoration: none;
     }
 
+    .skip-link { position: absolute; left: -9999px; top: 8px; z-index: 2000; background: #fff; color: #123b33; padding: 12px 16px; border-radius: 6px; }
+    .skip-link:focus { left: 12px; }
+    :focus-visible { outline: 3px solid #b96f60; outline-offset: 3px; }
+
     img {
       display: block;
       width: 100%;
@@ -139,7 +143,7 @@
       color: white;
       background:
         linear-gradient(90deg, #103d35ed 0%, #103d35a8 48%, #103d3540 100%),
-        url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=2000&q=85")
+        url("images/bouquet-feature.svg")
         center 55% / cover no-repeat;
     }
 
@@ -531,6 +535,7 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <!-- HEADER AND PAGE LINKS -->
 
@@ -550,7 +555,7 @@
         id="menu-toggle"
         aria-label="Open navigation"
         aria-expanded="false"
-        aria-controls="main-nav">
+        aria-controls="main-nav" type="button">
         ☰
       </button>
 
@@ -566,7 +571,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- HERO -->
 
@@ -613,7 +618,7 @@
 
           <article class="flower-card">
             <img
-              src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=800&q=80"
+              src="images/auckland-sunrise.svg"
               alt="Beautiful seasonal flowers"
               loading="lazy">
 
@@ -631,7 +636,7 @@
 
           <article class="flower-card">
             <img
-              src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=800&q=80"
+              src="images/wedding-florals.svg"
               alt="Romantic wedding flowers"
               loading="lazy">
 
@@ -649,7 +654,7 @@
 
           <article class="flower-card">
             <img
-              src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=800&q=80"
+              src="images/soft-blush.svg"
               alt="Elegant flower arrangement"
               loading="lazy">
 
@@ -676,7 +681,7 @@
 
         <img
           class="about-image"
-          src="https://images.unsplash.com/photo-1457089328109-e5d9bd499191?auto=format&fit=crop&w=1000&q=80"
+          src="images/corporate-florals.svg"
           alt="Florist arranging fresh flowers"
           loading="lazy">
 
@@ -761,6 +766,8 @@
         <div>
           <h3>✿ URBAN BLOOM</h3>
           <p>Florist · Auckland, New Zealand</p>
+          <p>09 000 0001 · hello@urbanbloom.kiwi</p>
+          <p>Mon–Fri 8:30 am–5:30 pm · Sat 9 am–3 pm · Sun closed</p>
           <p>Thoughtful flowers. Personal touches. Made with care.</p>
         </div>
 
@@ -793,36 +800,8 @@
     </div>
   </footer>
 
-  <!-- MENU JAVASCRIPT -->
+  <script src="script.js" defer></script>
 
-  <script>
-    const menuButton = document.getElementById("menu-toggle");
-    const navigation = document.getElementById("main-nav");
-
-    menuButton.addEventListener("click", function () {
-      const isOpen = navigation.classList.toggle("is-open");
-
-      menuButton.setAttribute("aria-expanded", String(isOpen));
-      menuButton.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation" : "Open navigation"
-      );
-      menuButton.textContent = isOpen ? "✕" : "☰";
-    });
-
-    navigation.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navigation.classList.remove("is-open");
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.setAttribute("aria-label", "Open navigation");
-        menuButton.textContent = "☰";
-      });
-    });
-
-    document.getElementById("current-year").textContent =
-      new Date().getFullYear();
-  </script>
-<!-- Urban Bloom Florist website update -->
 </body>
 </html>
 
